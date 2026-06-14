@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSC 榮耀號沖繩4日遊輪之旅</title>
+  <meta name="description" content="根據 2026 MSC 榮耀號沖繩4日電子說資手冊整理的遊輪之旅介紹網站。">
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #667085;
+      --line: #d8dee8;
+      --paper: #f7f9fb;
+      --white: #ffffff;
+      --sea: #006b76;
+      --sea-dark: #064951;
+      --coral: #c45235;
+      --gold: #b3822c;
+      --blue: #2d5f9a;
+      --shadow: 0 18px 45px rgba(23, 32, 51, 0.14);
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid rgba(216, 222, 232, 0.8);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-inner {
+      width: min(1180px, calc(100% - 32px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: conic-gradient(from 210deg, var(--sea), var(--blue), var(--gold), var(--sea));
+      box-shadow: 0 8px 20px rgba(0, 107, 118, 0.25);
+      flex: 0 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #344054;
+      font-size: 0.95rem;
+      font-weight: 700;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-links a {
+      min-height: 38px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      background: #e7f2f3;
+      color: var(--sea-dark);
+      outline: none;
+    }
+
+    .hero {
+      position: relative;
+      height: 72svh;
+      min-height: 520px;
+      max-height: 760px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(8, 20, 38, 0.86) 0%, rgba(8, 20, 38, 0.60) 42%, rgba(8, 20, 38, 0.10) 100%),
+        linear-gradient(0deg, rgba(8, 20, 38, 0.55) 0%, rgba(8, 20, 38, 0.04) 48%),
+        url("assets/pages/page-01.webp");
+      background-size: cover;
+      background-position: center 18%;
+    }
+
+    .hero-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 0 0 clamp(42px, 7vh, 76px);
+      color: var(--white);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.94);
+      font-size: 0.92rem;
+      font-weight: 800;
+      backdrop-filter: blur(10px);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      width: min(880px, 100%);
+      margin-top: 22px;
+      font-size: clamp(2.35rem, 7vw, 5.8rem);
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-text {
+      width: min(720px, 100%);
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(1rem, 2vw, 1.28rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      min-height: 46px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      font-weight: 850;
+      line-height: 1.2;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .button-primary {
+      background: var(--white);
+      color: var(--sea-dark);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    }
+
+    .button-secondary {
+      border-color: rgba(255, 255, 255, 0.42);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    section {
+      padding: clamp(56px, 8vw, 96px) 0;
+    }
+
+    .section-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-kicker {
+      color: var(--coral);
+      font-weight: 900;
+      font-size: 0.92rem;
+      text-transform: uppercase;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 900;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .facts {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fact-grid {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .fact {
+      min-height: 138px;
+      padding: 22px;
+      background: var(--white);
+    }
+
+    .fact span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .fact strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--ink);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      line-height: 1.35;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .day-card {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr) 210px;
+      gap: 20px;
+      align-items: stretch;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.06);
+      overflow: hidden;
+    }
+
+    .day-label {
+      padding: 24px;
+      background: var(--sea-dark);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .day-label span {
+      font-size: 0.88rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .day-label strong {
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    .day-body {
+      padding: 24px 4px 24px 0;
+    }
+
+    .day-body h3 {
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .day-body p {
+      margin: 12px 0 0;
+      color: #475467;
+    }
+
+    .day-meta {
+      padding: 24px;
+      background: #f0f6f7;
+      border-left: 1px solid var(--line);
+      display: grid;
+      align-content: center;
+      gap: 12px;
+    }
+
+    .meta-row {
+      display: grid;
+      gap: 2px;
+    }
+
+    .meta-row span {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .meta-row strong {
+      color: var(--sea-dark);
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+
+    .highlight-band {
+      background: #10253a;
+      color: var(--white);
+    }
+
+    .highlight-band .section-kicker {
+      color: #f0c36a;
+    }
+
+    .highlight-band .lead {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .experience-grid,
+    .ship-grid,
+    .notice-grid,
+    .cost-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .experience-card,
+    .ship-card,
+    .notice-card,
+    .cost-card {
+      min-height: 210px;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .experience-card strong,
+    .ship-card strong,
+    .notice-card strong,
+    .cost-card strong {
+      display: block;
+      font-size: 1.15rem;
+      line-height: 1.3;
+      font-weight: 900;
+    }
+
+    .experience-card p,
+    .ship-card p,
+    .notice-card p,
+    .cost-card p {
+      margin: 12px 0 0;
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .ship-card,
+    .notice-card,
+    .cost-card {
+      background: var(--white);
+      border-color: var(--line);
+      color: var(--ink);
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.06);
+    }
+
+    .ship-card p,
+    .notice-card p,
+    .cost-card p {
+      color: #475467;
+    }
+
+    .media-row {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 34px;
+    }
+
+    .source-preview {
+      min-height: 420px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #dde6ee;
+    }
+
+    .source-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .panel-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .panel-item {
+      padding: 18px 20px;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .panel-item strong {
+      display: block;
+      color: var(--sea-dark);
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .panel-item p {
+      margin: 6px 0 0;
+      color: #475467;
+    }
+
+    .note-band {
+      background: #f0f6f7;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .notice-card strong::before,
+    .cost-card strong::before,
+    .ship-card strong::before,
+    .experience-card strong::before {
+      content: "";
+      display: block;
+      width: 36px;
+      height: 4px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .ship-card strong::before {
+      background: var(--sea);
+    }
+
+    .cost-card strong::before {
+      background: var(--coral);
+    }
+
+    .detail-section {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+    }
+
+    .detail-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .detail-box {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.06);
+      overflow: hidden;
+    }
+
+    .detail-box summary {
+      min-height: 62px;
+      padding: 18px 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--sea-dark);
+      font-size: 1.08rem;
+      font-weight: 900;
+      list-style: none;
+    }
+
+    .detail-box summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .detail-box summary::after {
+      content: "+";
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex: 0 0 auto;
+    }
+
+    .detail-box[open] summary::after {
+      content: "-";
+    }
+
+    .detail-content {
+      padding: 0 22px 22px;
+      border-top: 1px solid var(--line);
+      color: #475467;
+    }
+
+    .detail-content ul,
+    .detail-content ol {
+      margin: 16px 0 0;
+      padding-left: 1.35rem;
+    }
+
+    .detail-content li + li {
+      margin-top: 8px;
+    }
+
+    .detail-content strong {
+      color: var(--ink);
+    }
+
+    .detail-note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--coral);
+      background: #fff7f4;
+      color: #7a3f2f;
+      font-weight: 800;
+    }
+
+    .packing-section {
+      background: #f0f6f7;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .packing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .packing-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.06);
+    }
+
+    .packing-card h3 {
+      color: var(--sea-dark);
+      font-size: 1.22rem;
+      font-weight: 900;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 9px;
+      color: #475467;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .check-list li::before {
+      content: "□";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--sea);
+      font-weight: 900;
+    }
+
+    .gallery-section {
+      background: var(--white);
+    }
+
+    .gallery-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: -10px 0 26px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+      gap: 14px;
+    }
+
+    .page-link {
+      display: grid;
+      gap: 8px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .page-link:hover,
+    .page-link:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(0, 107, 118, 0.5);
+      box-shadow: 0 14px 32px rgba(23, 32, 51, 0.12);
+      outline: none;
+    }
+
+    .page-link img {
+      width: 100%;
+      aspect-ratio: 1964 / 2800;
+      border-radius: 5px;
+      object-fit: cover;
+      background: #e4e9f0;
+    }
+
+    .page-link span {
+      font-weight: 900;
+      color: var(--sea-dark);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--sea);
+      background: #f0f6f7;
+      color: #475467;
+    }
+
+    .source-note strong {
+      color: var(--ink);
+    }
+
+    footer {
+      padding: 34px 0 46px;
+      background: #10253a;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 0.95rem;
+    }
+
+    footer .section-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    footer strong {
+      color: var(--white);
+    }
+
+    @media (max-width: 980px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        min-height: 78px;
+        padding: 12px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        padding-bottom: 2px;
+      }
+
+      .section-head,
+      .media-row {
+        grid-template-columns: 1fr;
+      }
+
+      .fact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .day-card {
+        grid-template-columns: 120px minmax(0, 1fr);
+      }
+
+      .day-meta {
+        grid-column: 1 / -1;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .experience-grid,
+      .ship-grid,
+      .notice-grid,
+      .cost-grid,
+      .packing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .hero {
+        height: 72svh;
+        min-height: 500px;
+        background-position: 58% top;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 8.5vw, 2.2rem);
+        line-height: 1.14;
+      }
+
+      .hero-text {
+        font-size: 1rem;
+      }
+
+      .eyebrow {
+        max-width: 100%;
+        white-space: normal;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .fact-grid,
+      .experience-grid,
+      .ship-grid,
+      .notice-grid,
+      .cost-grid,
+      .packing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .day-card {
+        grid-template-columns: 1fr;
+      }
+
+      .day-label {
+        min-height: 120px;
+      }
+
+      .day-body {
+        padding: 22px;
+      }
+
+      .day-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="主要導覽">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="回到首頁">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>MSC 榮耀號沖繩4日</span>
+      </a>
+      <div class="nav-links">
+        <a href="#route">航程</a>
+        <a href="#highlights">亮點</a>
+        <a href="#ship">船上</a>
+        <a href="#before">登船</a>
+        <a href="#packing">準備</a>
+        <a href="#source">原始頁面</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow">2026/06/18、07/09、07/22 適用航次</span>
+      <h1>MSC 榮耀號<br>沖繩4日遊輪之旅</h1>
+      <p class="hero-text">
+        從基隆港登上 MSC Bellissima，航向沖繩那霸，享受海上渡假村、美食、購物與船上娛樂。以下內容依電子說資手冊 40 頁整理。
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#route">查看每日航程</a>
+        <a class="button button-secondary" href="#source">核對電子書頁面</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="facts" aria-label="旅程快速資訊">
+    <div class="fact-grid">
+      <div class="fact">
+        <span>船名</span>
+        <strong>MSC 榮耀號 MSC Bellissima</strong>
+      </div>
+      <div class="fact">
+        <span>航程</span>
+        <strong>基隆港出發，4天3夜</strong>
+      </div>
+      <div class="fact">
+        <span>目的地</span>
+        <strong>日本沖繩・那霸過夜</strong>
+      </div>
+      <div class="fact">
+        <span>報到碼頭</span>
+        <strong>基隆港西岸旅客中心碼頭</strong>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="route">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Itinerary</span>
+            <h2>4天航程一眼看懂</h2>
+          </div>
+          <p class="lead">手冊行程表標示所有港口時間均為預估時間，實際仍以郵輪公司與船上公告為準。</p>
+        </div>
+
+        <div class="timeline">
+          <article class="day-card">
+            <div class="day-label">
+              <span>DAY 01</span>
+              <strong>基隆港</strong>
+            </div>
+            <div class="day-body">
+              <h3>登船啟航，開始海上渡假</h3>
+              <p>於基隆港登上 172,000 噸級 MSC 榮耀號 Bellissima。完成報到後可先前往 15 樓自助餐廳享用簡餐，晚間展開船上美食與娛樂體驗。</p>
+            </div>
+            <div class="day-meta">
+              <div class="meta-row"><span>報到</span><strong>12:30-15:30</strong></div>
+              <div class="meta-row"><span>關櫃</span><strong>16:00</strong></div>
+              <div class="meta-row"><span>預計啟航</span><strong>17:30</strong></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-label">
+              <span>DAY 02</span>
+              <strong>那霸</strong>
+            </div>
+            <div class="day-body">
+              <h3>抵達沖繩首府，夜泊那霸</h3>
+              <p>那霸是琉球群島最大的城市，也是沖繩政治與經濟中心。手冊提到國際通、首里城等知名景點，可自費參加 MSC 岸上觀光或自行安排交通。</p>
+            </div>
+            <div class="day-meta">
+              <div class="meta-row"><span>預計抵達</span><strong>13:30</strong></div>
+              <div class="meta-row"><span>停靠</span><strong>那霸港過夜</strong></div>
+              <div class="meta-row"><span>餐食</span><strong>郵輪上</strong></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-label">
+              <span>DAY 03</span>
+              <strong>那霸</strong>
+            </div>
+            <div class="day-body">
+              <h3>自由探索市區與購物區</h3>
+              <p>可利用上午時間走訪國際通或新都心購物城。國際通是那霸市中心約 1.6 公里的商業街，新都心則集結 DFS、百貨、電器、藥妝與流行品牌。</p>
+            </div>
+            <div class="day-meta">
+              <div class="meta-row"><span>活動</span><strong>自由活動</strong></div>
+              <div class="meta-row"><span>預計離港</span><strong>13:00</strong></div>
+              <div class="meta-row"><span>餐食</span><strong>郵輪上</strong></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-label">
+              <span>DAY 04</span>
+              <strong>基隆港</strong>
+            </div>
+            <div class="day-body">
+              <h3>返抵基隆，完成4天3夜航程</h3>
+              <p>早餐後依船上通知辦理離船。手冊提醒離船人潮較多，請依工作人員引導，並留意行李與結帳相關通知。</p>
+            </div>
+            <div class="day-meta">
+              <div class="meta-row"><span>預計抵達</span><strong>07:00</strong></div>
+              <div class="meta-row"><span>早餐</span><strong>郵輪上</strong></div>
+              <div class="meta-row"><span>住宿</span><strong>溫暖的家</strong></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlight-band" id="highlights">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Trip Highlights</span>
+            <h2>這趟旅程的重點</h2>
+          </div>
+          <p class="lead">手冊把這趟航程定位為海上渡假體驗：白天登岸玩沖繩，其他時間把船本身當成度假村。</p>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <strong>基隆港直接啟航</strong>
+            <p>指定報到地點為基隆港西岸旅客中心碼頭，地址是基隆市仁愛區港西街16-18號。</p>
+          </article>
+          <article class="experience-card">
+            <strong>那霸港停靠過夜</strong>
+            <p>第二天下午抵達那霸並夜泊，讓旅客能把岸上觀光與市區購物安排得更從容。</p>
+          </article>
+          <article class="experience-card">
+            <strong>沖繩自由探索</strong>
+            <p>手冊提到可自費參加 MSC 岸上觀光，也可自行搭乘計程車或大眾交通工具。</p>
+          </article>
+          <article class="experience-card">
+            <strong>船上美食與表演</strong>
+            <p>主餐廳、自助餐廳、特色餐廳、劇院、休閒酒吧與娛樂場域構成航程中的主要體驗。</p>
+          </article>
+          <article class="experience-card">
+            <strong>親子與青少年空間</strong>
+            <p>手冊列出 Baby Club、LEGO 兒童俱樂部、Young Club 與 Teen Club，依年齡分區服務。</p>
+          </article>
+          <article class="experience-card">
+            <strong>免稅購物與服務</strong>
+            <p>船上有精品大道、免稅商店、岸上觀光服務台、照片廊、醫務中心與旅客服務櫃台。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ship">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">On Board</span>
+            <h2>船上設施與餐飲</h2>
+          </div>
+          <p class="lead">手冊中以星號標示者為自費項目；特色餐廳、酒精與部分飲品、SPA、模擬器、醫療等通常需另付費。</p>
+        </div>
+
+        <div class="ship-grid">
+          <article class="ship-card">
+            <strong>主餐廳與自助餐</strong>
+            <p>主餐廳包含海王餐廳、燈塔餐廳與櫻桃餐廳；市集自助餐廳為 Market Place Buffet。</p>
+          </article>
+          <article class="ship-card">
+            <strong>晚餐梯次</strong>
+            <p>晚餐分三個梯次，手冊列出 17:00或17:30、19:15或19:45、21:30；實際座位與時間依船卡為準。</p>
+          </article>
+          <article class="ship-card">
+            <strong>特色餐廳</strong>
+            <p>自費選項包含墨西哥小館、美式牛排屋、海渡壽司吧、海渡鐵板燒、海中閣餐廳與香檳吧等。</p>
+          </article>
+          <article class="ship-card">
+            <strong>休閒娛樂</strong>
+            <p>倫敦大劇院、旋轉木馬劇院、XD 互動影院、天際線露天劇院、賭場、方程式賽車與虛擬實境迷宮等設施列於手冊。</p>
+          </article>
+          <article class="ship-card">
+            <strong>運動與泳池</strong>
+            <p>船上有游泳池、天際線泳池、亞利桑那水上樂園、喜馬拉雅橋、泰諾健身中心、健步道與多功能運動館。</p>
+          </article>
+          <article class="ship-card">
+            <strong>SPA 與購物</strong>
+            <p>MSC Aurea Spa、美髮美甲、熱區與免稅精品購物皆列入設施表，部分服務依手冊為自費。</p>
+          </article>
+        </div>
+
+        <div class="media-row">
+          <figure class="source-preview">
+            <img src="assets/pages/page-25.webp" alt="MSC 榮耀號設施表原始頁面">
+          </figure>
+          <div class="panel-list">
+            <div class="panel-item">
+              <strong>船卡就是航行期間的身分證</strong>
+              <p>手冊說明船卡有三個功能：航行身分證、消費簽帳卡與房間鑰匙，登船與離船都會檢查。</p>
+            </div>
+            <div class="panel-item">
+              <strong>飲品與酒吧費用要另外看</strong>
+              <p>酒精、碳酸飲料、果汁及部分餐廳或表演場域飲品，手冊提醒需額外付費並加收 18% 服務費。</p>
+            </div>
+            <div class="panel-item">
+              <strong>網路與電話屬衛星通訊</strong>
+              <p>船上可購買衛星網路；房內直撥國際衛星電話約每分鐘 USD 10，實際仍依船上公告。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="note-band" id="before">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Before Boarding</span>
+            <h2>登船前必看提醒</h2>
+          </div>
+          <p class="lead">這些是手冊明確提醒的準備事項，建議旅客出發前逐項確認。</p>
+        </div>
+
+        <div class="notice-grid">
+          <article class="notice-card">
+            <strong>報到地點與時間</strong>
+            <p>基隆港西岸旅客中心碼頭，12:30-15:30 報到，16:00 關櫃。手冊提醒依船票指定時間抵達，過早可能需在外等候。</p>
+          </article>
+          <article class="notice-card">
+            <strong>護照與文件</strong>
+            <p>手冊提醒旅遊證件通常須有至少 6 個月效期，並準備護照正本與影本。登船、出入境與返台需使用同一本護照。</p>
+          </article>
+          <article class="notice-card">
+            <strong>兵役與雙重國籍</strong>
+            <p>役男、現役軍人、退伍軍人與雙重國籍旅客需依規定確認出境文件，手冊也列出役男線上申請出境核准的提醒。</p>
+          </article>
+          <article class="notice-card">
+            <strong>海關規定</strong>
+            <p>不可攜帶肉類、水果與農產品出入境或登船。手冊列明違規罰鍰可能從新台幣 3,000 元至 3,000,000 元。</p>
+          </article>
+          <article class="notice-card">
+            <strong>外籍旅客入境卡</strong>
+            <p>手冊提到自 114年10月1日起，外籍旅客入境台灣需填寫電子入國登記表，基隆郵輪旅客須於返台前 3 日內完成。</p>
+          </article>
+          <article class="notice-card">
+            <strong>離船前一晚</strong>
+            <p>離船前需觀看艙房電視的離船說明，依指示掛好行李條並將托運行李放在艙房門外，重要文件與藥品務必隨身帶。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="boarding-details">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Full Boarding Notes</span>
+            <h2>完整登船須知</h2>
+          </div>
+          <p class="lead">以下依手冊「登船須知、碼頭報到、船卡、離船準備須知」整理，保留重要限制、文件與流程細節。</p>
+        </div>
+
+        <div class="detail-stack">
+          <details class="detail-box" open>
+            <summary>護照、旅遊證件與身分條件</summary>
+            <div class="detail-content">
+              <ul>
+                <li>多數國家地區規定外國賓客所持護照效期須在 <strong>6 個月以上</strong>，並準備護照正本及影本二份。</li>
+                <li>從提供船公司輸入賓客基本資料、基隆港出境、登船、日本出入境、離船到基隆港入境，<strong>全程需使用同一本護照</strong>。</li>
+                <li>雙重國籍賓客入境台灣的證件與登船證件需為同一份；缺少必要證件或違反規定，可能被拒絕登船。</li>
+                <li>役男、現役軍人、役齡男子須取得必要旅遊核准。役男指年滿 19 歲當年 1 月 1 日起至年滿 36 歲當年 12 月 31 日止尚未履行兵役義務男子。</li>
+                <li>役男可至內政部役政署網站線上申請短期出境：<strong>https://www.ris.gov.tw/departure/app/Departure/main</strong>；如有疑問，請向內政部相關單位確認。</li>
+                <li>自 114 年 10 月 1 日起，外籍旅客入境前需完成電子入國登記表。搭乘基隆港郵輪者須於返台前 3 天內免費上網填報 TWAC：<strong>https://twac.immigration.gov.tw</strong>。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>海關檢疫與入境台灣</summary>
+            <div class="detail-content">
+              <ul>
+                <li>入出境及上下船嚴禁攜帶任何肉類、水果及農產品；查獲違規者可能處以新台幣 3,000 元至 300 萬元罰鍰。</li>
+                <li>海關僅允許攜帶煙一條；電子煙品禁止攜帶入境。外幣以 1 萬美元或等值外幣為手冊提醒標準。</li>
+                <li>入境台灣時，攜帶 10,000 美元含以上、菸酒超過免稅數量、酒類超過 1 公升、紙菸 200 支、雪茄 25 支或菸絲 1 磅，未依規定申報可能受罰。</li>
+                <li>嚴禁攜帶任何動植物入境台灣；於日本販售的電子菸品及器具禁止攜帶入境。</li>
+                <li>詳細規定請依入境報關須知與台北關中文版網站公告為準。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>安全檢查與禁止攜帶品</summary>
+            <div class="detail-content">
+              <ul>
+                <li>手提行李尺寸不得超過 <strong>55 x 45 x 25 cm</strong>，以便接受 X 光檢查。</li>
+                <li>藥品、電腦、照相機、貴重或易碎物品必須放在手提行李中。</li>
+                <li>基於健康與安全標準，禁止攜帶任何類型液體、生鮮食物上船及電器用品。個人護理產品、藥品、兒童專用產品或食品、特殊認證飲食之產品不在此限。</li>
+                <li>因船上乘客安全禁止攜帶：吹風機、捲髮器、熨斗、爐具、延長線；水果刀及各類刀具，只有嬰兒食物剪不在此限，且全長須不超過 10 公分。</li>
+                <li>禁止攜帶鋰電池電動滑板車與對講機；手冊提醒部分對講機頻率會干擾船上通訊。</li>
+                <li>如安檢查出禁止物品，將由安保單位保管寄存，離船時歸還。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>健康、藥品、無障礙與特殊飲食</summary>
+            <div class="detail-content">
+              <ul>
+                <li>登船前請確認健康狀況無虞。如出現發燒、腹瀉、出疹、咳嗽等疑似傳染病症狀，需主動通報船方或前往郵輪醫療中心，以免延誤就醫。</li>
+                <li>常用藥物如慢性疾病藥方、感冒藥、腸胃藥、暈船藥等，請放在隨身行李中。建議出發前請醫師多開幾天處方，以備突發狀況。</li>
+                <li>長期服用藥品或每日注射藥劑者，需準備藥品英文名稱與英文病歷；請勿隨意拋棄注射器或針頭，務必交給郵輪醫療中心回收處理，或向房務人員索取針頭廢棄物容器。</li>
+                <li>近期曾做特殊治療或手術者，請醫師開立英文醫療報告與醫生證明。</li>
+                <li>基於健康與安全考量，手冊列明無法接受以下賓客登船：航程結束前進入第 24 週懷孕期之孕婦、開航前未滿 6 個月之孩童。手冊也提醒雖無最高登船年齡，仍建議超過 70 歲旅客自行體檢並向醫師確認是否適合旅行。</li>
+                <li>船上輪椅僅供協助賓客起訖港口上下船與航行期間緊急所使用；需長時間使用輪椅者，請自行攜帶摺疊式輪椅，且需有親友陪同並能在岸上與船上協助。</li>
+                <li>特殊飲食包含低鈉、低糖、純素餐食，也可事先預訂猶太教餐食或清真餐食等；相關需求需於開航 <strong>60 個工作天前</strong>填寫申請表格，並由餐飲部門確認是否能提供協助。</li>
+                <li>對特定食物過敏者，點餐時務必與服務人員確認食材內容；登船後也請再次與餐廳服務人員確認。船上不提供代冰凍服務。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>電器、盥洗用品與衣著建議</summary>
+            <div class="detail-content">
+              <ul>
+                <li>船艙內插座電壓為 110 伏特及 220 伏特；台灣電器插頭可直接使用，不需準備轉換插頭。</li>
+                <li>客艙內僅提供大小毛巾、洗髮精、沐浴乳、吹風機；不提供牙膏、牙刷、洗面乳、拖鞋及刮鬍刀，請自行攜帶。</li>
+                <li>搭乘郵輪時可穿著輕便休閒服飾，例如短褲、長褲或運動服；特殊場地仍須依規定穿著，例如健身房、主餐廳等。</li>
+                <li>正式餐廳晚餐建議兩種穿著：休閒正式 Smart Casual 與正式服裝 Formal。至正式餐廳用餐時，不可穿著短袖運動衫、短褲、背心等過於休閒服飾，也不可穿拖鞋或涼鞋入場。</li>
+                <li>休閒正式服裝：女士可穿裙裝、連身洋裝或長褲；男士可穿長褲及襯衫。正式服裝：女士可穿晚禮服、旗袍或雞尾酒小禮服；男士可穿燕尾服或西裝並打上領帶。</li>
+                <li>主題派對包含義大利之夜，手冊提到會以義大利國旗顏色綠、白、紅為主題；白色派對建議準備白色服裝。實際活動以船上公告為準。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>船上消費、外幣、信用卡與帳款</summary>
+            <div class="detail-content">
+              <ul>
+                <li>賓客服務櫃檯提供美金兌換日幣服務，但手冊提醒兌換匯率不佳，建議出發前先兌換好日幣。</li>
+                <li>船上為無現金航遊；消費不需直接以現金支付，所有消費僅需簽名，帳款會自動掛至艙房帳單。</li>
+                <li>每位賓客皆需信用卡授權。若沒有信用卡，登船當天需至賓客服務櫃檯預存現金手續，須預先支付每人最低 150 美元保證金；船上消費自此預付款扣除，款項不足需補足。</li>
+                <li>未使用完之餘額，須於航程結束前至賓客服務櫃檯或機器領回美金現金。</li>
+                <li>郵輪通用貨幣為美金；船上接受美金現金（適用賭場），也接受 Visa、MasterCard、American Express、JCB 及銀聯信用卡。</li>
+                <li>行程中的所有收據及結帳明細，請至少保留 6 個月。消費收據也可從手機的 MSC for Me App 下載。</li>
+                <li>登船後可使用船上 5/6 樓的信用卡自助註冊機綁定船卡帳戶，也可用自己的信用卡幫親友或其他乘客的船卡綁定。</li>
+                <li>信用卡綁定時會小額試刷 1 美元以確認有效性；最終帳單依郵輪上實際消費金額為準。國際交易預授權額度退回時間取決於發卡銀行，而非 MSC 地中海郵輪。</li>
+                <li>若帳單有疑義，請務必在離船前向 5 樓賓客服務中心提出並現場核實。賭場帳款須於離船前結清，下船後籌碼與代幣無法再兌換。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>酒類、飲料、抽菸與攝影禮儀</summary>
+            <div class="detail-content">
+              <ul>
+                <li>船房和餐廳會提供優惠酒類套裝清單供賓客選購；未滿 18 歲賓客禁止於船上購買或飲用酒精類飲料。</li>
+                <li>船上免稅店購買免稅酒類商品，將由地中海郵輪暫為保管；寄存時請向安檢人員索取保管證明，並於航程結束前主動至賓客服務櫃檯取回。</li>
+                <li>郵輪公共區域與船房皆嚴禁吸菸；如確認在船房內抽菸將罰款，實際以船上公告為主。屢勸不聽者，船方有權要求提早離船。</li>
+                <li>指定吸菸區依船上公告為準。手冊提到賭場右舷僅於玩老虎機時允許吸菸，賭場左舷牌桌禁止吸菸，另有公告於戶外甲板之吸菸區。</li>
+                <li>在吸菸區抽菸時請使用工作人員提供之菸灰缸，切勿向海中丟棄香菸或菸灰。手冊特別提醒：在非吸菸區吸菸，屢勸不聽者，郵輪公司有權要求賓客離船。</li>
+                <li>郵輪旅遊期間可在船上拍攝錄影，但需尊重其他賓客隱私權；因著作權原因，觀賞船上娛樂表演時禁止錄影。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>碼頭報到文件與基隆港登船流程</summary>
+            <div class="detail-content">
+              <ul>
+                <li>登船日前會收到登船所需文件資料袋，內含船票、航程信息與加購服務、船卡頸掛帶、托運行李吊牌；請務必攜至基隆港辦理登船手續。</li>
+                <li>船票需依指定時間報到並辦理登船手續；提前抵達可能被要求在航站外等候。船卡頸掛帶可掛勾船卡，船卡背面有主餐廳、用餐時間及梯次資訊。</li>
+                <li>托運行李吊牌列印姓名與船艙號碼，請先確認正確無誤。抵達基隆港、交付大型托運行李前，務必將行李吊牌繫上，工作人員才可將行李送至艙房。</li>
+              </ul>
+              <ol>
+                <li>登船報到需攜帶船票、護照正本及影本二份、登船文件資料袋。</li>
+                <li>於登船日依船票規定報到時間內，抵達西岸旅客中心碼頭。</li>
+                <li>依照指引前往並托運大型行李；行李吊牌務必繫上。貴重物品如金錢、船票、護照、緊急用藥等不可託運。</li>
+                <li>搭手扶梯上二樓，先準備好船票、護照正本及影本二份。</li>
+                <li>依指引於服務櫃台排隊，依序辦理登船報到。櫃台人員會拍攝照片，將肖像與船卡資訊結合並儲存至船上系統。</li>
+                <li>完成後櫃台人員會交還旅行資料，請再次核對船票、護照正本及影本二份皆已歸還。</li>
+                <li>依指引循序進行安全檢查及台灣移民官員證照查驗。</li>
+                <li>通過移民署後將收取護照正本，旅客自行保管影本。護照正本會在航程最後一晚送至客艙；若未收到，請至服務櫃檯簽名取回。</li>
+                <li>登船時船上梯口安檢人員會核對照片與旅客是否一致；如照片不清晰，可能需再次拍攝。</li>
+                <li>船卡會掛在艙房門把上，請自行取下並妥善保管。</li>
+                <li>旅客登船後，船上工作人員會將日本海關申報單送至艙房，一個家庭只需填寫一張海關申報單。</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>船卡、托運行李與行李遺失</summary>
+            <div class="detail-content">
+              <ul>
+                <li>船卡 Cruise Card 會標示 MSC 緊急聯絡電話、船名與乘船期間、姓名、樓層與艙房號碼、緊急集合地點、主餐廳名稱、用餐時間與桌次。</li>
+                <li>登船後每人會取得船卡，航行期間等同身分證。船卡上印有個人姓名；手冊提醒上船後若發現房間不在朋友房間附近，無法調換房間，敬請配合。</li>
+                <li>船卡三個作用為：航行身分證、消費簽帳卡、房間鑰匙。請妥善保管並隨身攜帶，上下船都需查驗；未攜帶可能被拒絕下岸或登船。</li>
+                <li>旅客行李數量較多，送抵客艙時間可能稍晚。等待期間可先研究客船與船上設施；若開航後 2 小時仍未收到行李，請聯絡賓客服務櫃檯。</li>
+                <li>行李損壞或遺失須盡快通報船上服務人員並申報，同時索取副本，以利日後申訴。</li>
+                <li>手冊提醒，運送人不為財產或行李正常耗損負責；貴重物品、不可替換物品與藥品建議隨身保管，不要交由他人處理或放入託運行李。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="detail-box">
+            <summary>離船準備與行李提領</summary>
+            <div class="detail-content">
+              <ul>
+                <li>離船前一天，客艙內電視會播放離船說明影片，請務必觀看。</li>
+                <li>船上工作人員會在離船前一天將行李條與離船資訊表送至艙房信箱。請在行李條上寫姓名、聯絡電話與船艙號碼，並詳閱離船資訊。</li>
+                <li>行李條存根聯請撕下留存，以便清楚分辨自己行李；請勿拿錯行李條顏色區域。</li>
+                <li>下船前一晚就寢前，依日報規定時間將托運行李上鎖並放在客艙門外，以利工作人員收集。牙膏、牙刷、替換衣物、重要文件、護照、藥品、貴重物與易碎品請放入隨身行李。</li>
+                <li>請務必準備一套隔天離船所需穿著，避免所有衣物都託運下船。</li>
+                <li>離船當天請依離船資訊表於指定時間前往指定地點集合。離開客艙前請檢查抽屜、衣櫃、保險箱；船卡仍需隨身攜帶，離船程序會用到。</li>
+                <li>早餐時間與其他日子不同，請確認 Daily Program 每日船上指南；房間內保險箱請勿上鎖。</li>
+                <li>提領行李時，行李放置區同時約有 5,000 至 5,500 件行李。請確認為自身物品後再領取，拿錯行李造成的責任與費用須自行承擔。</li>
+              </ul>
+              <div class="detail-note">手冊提醒：若遇特殊情況未能在抵達碼頭即時申報，將不予受理。</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="packing-section" id="packing">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Packing List</span>
+            <h2>附錄準備物品</h2>
+          </div>
+          <p class="lead">以下為手冊「附錄準備物品」完整清單，保留原分類與項目。出發前可逐項核對。</p>
+        </div>
+
+        <div class="packing-grid">
+          <article class="packing-card">
+            <h3>資訊類</h3>
+            <ul class="check-list">
+              <li>護照正本 + 影本</li>
+              <li>簽證</li>
+              <li>身分證、健保卡</li>
+              <li>行程手冊、地圖</li>
+              <li>紙、筆、記事本</li>
+              <li>國際駕照</li>
+              <li>美金現金、信用卡（船上押金使用）</li>
+              <li>台幣、銅板</li>
+              <li>日本海關單、日本入出境卡</li>
+              <li>親友聯絡電話、住址</li>
+            </ul>
+          </article>
+
+          <article class="packing-card">
+            <h3>衣物類</h3>
+            <ul class="check-list">
+              <li>休閒服、休閒褲、襯衫</li>
+              <li>薄外套</li>
+              <li>正式服裝（西裝／洋裝）</li>
+              <li>皮鞋</li>
+              <li>內衣褲、襪子</li>
+              <li>泳衣泳褲、泳帽、泳鏡</li>
+              <li>拖鞋、涼鞋、球鞋</li>
+              <li>防曬油、遮陽帽</li>
+              <li>太陽眼鏡、陽傘</li>
+              <li>眼鏡、眼鏡盒、隱形眼鏡相關</li>
+              <li>塑膠袋（換洗衣物用）</li>
+            </ul>
+          </article>
+
+          <article class="packing-card">
+            <h3>電器類</h3>
+            <ul class="check-list">
+              <li>手機、充電器、傳輸線</li>
+              <li>行動電源（不得託運）</li>
+              <li>相機、充電器、記憶卡</li>
+            </ul>
+          </article>
+
+          <article class="packing-card">
+            <h3>盥洗類</h3>
+            <ul class="check-list">
+              <li>牙刷、牙膏、牙線</li>
+              <li>毛巾、浴帽、棉花棒</li>
+              <li>沐浴乳、洗髮精、洗面乳</li>
+              <li>隨身面紙包、吸油面紙</li>
+              <li>化妝品、梳子</li>
+              <li>刮鬍刀</li>
+            </ul>
+          </article>
+
+          <article class="packing-card">
+            <h3>其他類</h3>
+            <ul class="check-list">
+              <li>身分證影本（備用）</li>
+              <li>個人備用藥品</li>
+              <li>暈船藥</li>
+              <li>雨傘、便利雨衣</li>
+              <li>備用眼鏡、望遠鏡</li>
+              <li>手帕、衛生紙、濕紙巾</li>
+              <li>針線、備用鈕扣</li>
+              <li>自拍棒</li>
+            </ul>
+          </article>
+
+          <article class="packing-card">
+            <h3>其他類續</h3>
+            <ul class="check-list">
+              <li>輕便小背包、購物袋</li>
+              <li>手錶、旅行鬧鐘（可用手機取代）</li>
+              <li>手電筒*（可用手機取代）</li>
+              <li>小型計算機*（可用手機取代）</li>
+              <li>2 吋大頭照 3 張（備用）</li>
+              <li>其他</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="costs">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Costs</span>
+            <h2>費用與消費提醒</h2>
+          </div>
+          <p class="lead">以下只整理手冊有寫出的費用類型，價格或細節若由船上公告決定，網站不自行推估。</p>
+        </div>
+        <div class="cost-grid">
+          <article class="cost-card">
+            <strong>船上服務費</strong>
+            <p>內艙、海景、陽台等房型為每人每晚 USD 18；YC 套房為每人每晚 USD 21；未滿 2 歲嬰兒免收。</p>
+          </article>
+          <article class="cost-card">
+            <strong>日本國際觀光旅客稅</strong>
+            <p>自 2019/01/07 起，每位離開日本旅客為 JPY 1,000，手冊說明會由船上帳戶收取等值美元。</p>
+          </article>
+          <article class="cost-card">
+            <strong>自費服務</strong>
+            <p>特色餐廳、酒水飲品、洗衣熨燙、照片、紀念品、賭場、醫療、美容美髮、SPA、網路與電話等依手冊為自費或可能自費。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="source">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Source Pages</span>
+            <h2>電子書40頁原始頁面</h2>
+          </div>
+          <p class="lead">我把電子書每一頁都放在這裡。點任一縮圖可開啟高解析原頁，方便核對文字與細節。</p>
+        </div>
+        <div class="gallery-tools">來源：2026MSC榮耀號-沖繩4日電子說資手冊(0618.0709.0722)，共 40 頁。</div>
+        <div class="gallery-grid" aria-label="電子書頁面縮圖">
+          <a class="page-link" href="assets/pages/page-01.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-01.webp" alt="電子書第1頁"><span>P01</span></a>
+          <a class="page-link" href="assets/pages/page-02.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-02.webp" alt="電子書第2頁"><span>P02</span></a>
+          <a class="page-link" href="assets/pages/page-03.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-03.webp" alt="電子書第3頁"><span>P03</span></a>
+          <a class="page-link" href="assets/pages/page-04.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-04.webp" alt="電子書第4頁"><span>P04</span></a>
+          <a class="page-link" href="assets/pages/page-05.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-05.webp" alt="電子書第5頁"><span>P05</span></a>
+          <a class="page-link" href="assets/pages/page-06.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-06.webp" alt="電子書第6頁"><span>P06</span></a>
+          <a class="page-link" href="assets/pages/page-07.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-07.webp" alt="電子書第7頁"><span>P07</span></a>
+          <a class="page-link" href="assets/pages/page-08.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-08.webp" alt="電子書第8頁"><span>P08</span></a>
+          <a class="page-link" href="assets/pages/page-09.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-09.webp" alt="電子書第9頁"><span>P09</span></a>
+          <a class="page-link" href="assets/pages/page-10.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-10.webp" alt="電子書第10頁"><span>P10</span></a>
+          <a class="page-link" href="assets/pages/page-11.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-11.webp" alt="電子書第11頁"><span>P11</span></a>
+          <a class="page-link" href="assets/pages/page-12.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-12.webp" alt="電子書第12頁"><span>P12</span></a>
+          <a class="page-link" href="assets/pages/page-13.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-13.webp" alt="電子書第13頁"><span>P13</span></a>
+          <a class="page-link" href="assets/pages/page-14.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-14.webp" alt="電子書第14頁"><span>P14</span></a>
+          <a class="page-link" href="assets/pages/page-15.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-15.webp" alt="電子書第15頁"><span>P15</span></a>
+          <a class="page-link" href="assets/pages/page-16.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-16.webp" alt="電子書第16頁"><span>P16</span></a>
+          <a class="page-link" href="assets/pages/page-17.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-17.webp" alt="電子書第17頁"><span>P17</span></a>
+          <a class="page-link" href="assets/pages/page-18.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-18.webp" alt="電子書第18頁"><span>P18</span></a>
+          <a class="page-link" href="assets/pages/page-19.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-19.webp" alt="電子書第19頁"><span>P19</span></a>
+          <a class="page-link" href="assets/pages/page-20.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-20.webp" alt="電子書第20頁"><span>P20</span></a>
+          <a class="page-link" href="assets/pages/page-21.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-21.webp" alt="電子書第21頁"><span>P21</span></a>
+          <a class="page-link" href="assets/pages/page-22.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-22.webp" alt="電子書第22頁"><span>P22</span></a>
+          <a class="page-link" href="assets/pages/page-23.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-23.webp" alt="電子書第23頁"><span>P23</span></a>
+          <a class="page-link" href="assets/pages/page-24.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-24.webp" alt="電子書第24頁"><span>P24</span></a>
+          <a class="page-link" href="assets/pages/page-25.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-25.webp" alt="電子書第25頁"><span>P25</span></a>
+          <a class="page-link" href="assets/pages/page-26.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-26.webp" alt="電子書第26頁"><span>P26</span></a>
+          <a class="page-link" href="assets/pages/page-27.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-27.webp" alt="電子書第27頁"><span>P27</span></a>
+          <a class="page-link" href="assets/pages/page-28.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-28.webp" alt="電子書第28頁"><span>P28</span></a>
+          <a class="page-link" href="assets/pages/page-29.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-29.webp" alt="電子書第29頁"><span>P29</span></a>
+          <a class="page-link" href="assets/pages/page-30.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-30.webp" alt="電子書第30頁"><span>P30</span></a>
+          <a class="page-link" href="assets/pages/page-31.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-31.webp" alt="電子書第31頁"><span>P31</span></a>
+          <a class="page-link" href="assets/pages/page-32.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-32.webp" alt="電子書第32頁"><span>P32</span></a>
+          <a class="page-link" href="assets/pages/page-33.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-33.webp" alt="電子書第33頁"><span>P33</span></a>
+          <a class="page-link" href="assets/pages/page-34.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-34.webp" alt="電子書第34頁"><span>P34</span></a>
+          <a class="page-link" href="assets/pages/page-35.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-35.webp" alt="電子書第35頁"><span>P35</span></a>
+          <a class="page-link" href="assets/pages/page-36.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-36.webp" alt="電子書第36頁"><span>P36</span></a>
+          <a class="page-link" href="assets/pages/page-37.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-37.webp" alt="電子書第37頁"><span>P37</span></a>
+          <a class="page-link" href="assets/pages/page-38.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-38.webp" alt="電子書第38頁"><span>P38</span></a>
+          <a class="page-link" href="assets/pages/page-39.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-39.webp" alt="電子書第39頁"><span>P39</span></a>
+          <a class="page-link" href="assets/pages/page-40.webp" target="_blank" rel="noopener"><img src="assets/thumbs/page-40.webp" alt="電子書第40頁"><span>P40</span></a>
+        </div>
+        <div class="source-note">
+          <strong>正確性說明：</strong>此頁以手冊圖片逐頁整理，未將手冊沒有寫明的價格、活動細節或開放時間自行補上。港口時間、餐廳價格與船上服務仍以郵輪公司及船上公告為準。
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <div><strong>MSC 榮耀號沖繩4日遊輪之旅</strong></div>
+      <div>內容整理自電子說資手冊，含 40 頁原始頁面核對區。</div>
+    </div>
+  </footer>
+</body>
+</html>
