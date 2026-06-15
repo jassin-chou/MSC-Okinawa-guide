@@ -859,6 +859,7 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      min-width: 0;
       border: 1px solid rgba(216, 222, 232, 0.95);
       border-radius: 8px;
       background: var(--white);
@@ -915,12 +916,13 @@
       min-height: 230px;
       flex: 1;
       overflow-y: auto;
+      overflow-x: hidden;
       padding: 16px;
       background: #f4f7f8;
     }
 
     .assistant-message {
-      width: fit-content;
+      width: auto;
       max-width: 92%;
       margin: 0 0 12px;
       padding: 11px 13px;
@@ -928,6 +930,8 @@
       font-size: 0.93rem;
       line-height: 1.58;
       white-space: pre-line;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .assistant-message.user {
@@ -946,6 +950,7 @@
       padding: 12px 14px 14px;
       border-top: 1px solid var(--line);
       background: var(--white);
+      min-width: 0;
     }
 
     .assistant-suggestions {
@@ -956,6 +961,7 @@
     }
 
     .assistant-suggestion {
+      max-width: 100%;
       border: 1px solid rgba(0, 107, 118, 0.24);
       border-radius: 999px;
       background: #eef8f8;
@@ -964,6 +970,7 @@
       font: 700 0.78rem/1.25 "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
       letter-spacing: 0;
       padding: 7px 10px;
+      white-space: normal;
     }
 
     .assistant-suggestion:hover,
@@ -975,8 +982,9 @@
 
     .assistant-form {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 8px;
+      min-width: 0;
     }
 
     .assistant-input {
